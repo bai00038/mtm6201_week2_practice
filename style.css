@@ -1,0 +1,124 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* overall layout */
+.flex_container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+/* style of nav */
+.nav {
+    height: 100%;
+    flex-basis: 20rem;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    width:100%;
+}
+
+.nav_content {
+    color: white;
+    padding-left: 1rem;
+}
+.nav_item {
+    padding: 12px;
+}
+.log_out {
+    margin: auto 2rem 2rem 1.5rem;
+    background-color: none;
+    border: 1px;
+    border-color: aliceblue;
+    border-radius: 4px;
+    height: 2rem;
+}
+
+/* main layout */
+main {
+    flex-grow: 5;
+    flex-basis: 0;
+}
+.main_container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    /* background-color: rgb(149, 114, 68); */
+}
+
+.sub_nav {
+    flex-basis: 5rem;
+}
+
+/* core data layout */
+.main_content {
+    flex-grow: 8;
+    display: flex;
+    flex-direction: row;
+}
+.middle {
+    width: 100%;
+    flex-grow: 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 28% 48% auto;
+    grid-template-areas: 
+    'facebook instagram twitter'
+    'stastistics stastistics stastistics'
+    'folowers likes comments'
+    ;
+}
+.middle_item {
+    margin: 0.5rem;
+    background-color: rgb(206, 195, 244);
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+.facebook {
+    grid-area: facebook;
+}
+.instagram {
+    grid-area: instagram;
+}
+.twitter {
+    grid-area: twitter;
+}
+.stastistics {
+   grid-area: stastistics; 
+}
+.folowers {
+    grid: folowers;
+}
+
+/* right part layout */
+.left {
+    width: 35%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.left_item {
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+.item1 {
+    flex-grow: 1.8;
+    background-color: rgb(172, 248, 223);
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+}
+.item2 {
+    flex-grow: 1;
+    background-color: rgb(148, 213, 247);
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+}
